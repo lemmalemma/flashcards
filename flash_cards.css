@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
+
+body {
+    background-size: cover;
+    background-color: white;
+    background-image: url(https://stepik.org/media/attachments/lesson/374893/world.png);
+    background-repeat: no-repeat;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    background-position: center 25px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+.card {
+    width: 20vmin;
+    height: 20vmin;
+    /* not needed now the front and back are coloured and styled
+    background-color: #fff2e6;
+    color: #ff9933;
+    border-radius: 5px;
+    */
+    margin: 5px;
+    font-weight: bold;
+    transition: 2s ease;
+    transform-style: preserve-3d;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.front {
+    background-color: #fff2e6;
+    color: #ff9933;
+}
+
+.back {
+    background-color: #ff9933;
+    color: #fff2e6;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
